@@ -7,7 +7,15 @@
         {{ .Site.Title }}
       {{- end -}}
     </a>
-  </div>
+    &mdash;
+    <a href="{{ "/" | relLangURL }}" class="logo-tagline">
+       {{ if .Site.Params.Description }}
+         {{ .Site.Params.Description | safeHTML }}
+       {{ else }}
+         {{ .Site.Description }}
+       {{ end }}
+     </a>
+</div>
   <div class="mobile-navbar-icon">
     <span></span>
     <span></span>

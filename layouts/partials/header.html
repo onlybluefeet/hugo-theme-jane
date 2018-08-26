@@ -1,11 +1,23 @@
 <div class="logo-wrapper">
-  <a href="{{ "/" | relLangURL }}" class="logo">
-    {{ if .Site.Params.logoTitle }}
-      {{ .Site.Params.logoTitle | safeHTML }}
-    {{ else }}
-      {{ .Site.Title }}
-    {{ end }}
-  </a>
+  <div class="logo">
+    <a href="{{ "/" | relLangURL }}" class="logo">
+      {{ if .Site.Params.logoTitle }}
+        {{ .Site.Params.logoTitle | safeHTML }}
+      {{ else }}
+        {{ .Site.Title }}
+      {{ end }}
+    </a>
+  </div>
+
+  <div class="logo-tagline">
+    <a href="{{ "/" | relLangURL }}" >
+      {{ if .Site.Params.Description }}
+        {{ .Site.Params.Description | safeHTML }}
+      {{ else }}
+        {{ .Site.Description }}
+      {{ end }}
+    </a>
+  </div>
 </div>
 
 <nav class="site-navbar">
